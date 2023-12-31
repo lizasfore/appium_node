@@ -1,21 +1,32 @@
-name: GitHub Actions Demo
+name: Automation Tests on BrowserStack
+
 on: [push]
+
 jobs:
-  Explore-GitHub-Actions:
+  run-tests:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Display Event Information
-        run: |
-          echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
-          echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
-          echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
-      - name: Check out repository code
+      - name: Checkout Repository
         uses: actions/checkout@v3
-      - name: Clone Repository Info
-        run: |
-          echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
-          echo "🖥️ The workflow is now ready to test your code on the runner."
-      - name: List files in the repository
-        run: ls ${{ github.workspace }}
-      - name: Job Status
-        run: echo "🍏 This job's status is ${{ job.status }}."
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18" # Specify your Node.js version here
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Run Tests on BrowserStack
+        env:
+          BROWSERSTACK_USERNAME: ${{ secrets.BROWSERSTACK_USERNAME }}
+          BROWSERSTACK_ACCESS_KEY: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
+        run: npm run test:android:bs # Replace with your test script
+
+      - name: Upload Results to Artifacts
+        if: failure() # This step will execute only if the previous step fails
+        uses: actions/upload-artifact@v3
+        with:
+          name: test-artifacts
+          path: E:\Tools\appium_node\reporters\junit-results # Replace with the path to your test results
