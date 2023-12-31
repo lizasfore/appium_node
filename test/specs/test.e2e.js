@@ -16,14 +16,13 @@ describe("My Login application", () => {
     );
     const btnClr = await browser.$("id=com.google.android.calculator:id/clr");
 
+    await browser.pause(10000);
     await btn7.click();
     await btnDiv.click();
     await btn5.click();
     await btnEq.click();
     expect(await result.getText()).toEqual("1.4");
     await btnClr.click();
-
-    await browser.pause(5000);
 
     // Example assertions (adjust based on actual application behavior)
     // const result = await browser.$("id=com.google.android.calculator:id/result");
