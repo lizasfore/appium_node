@@ -16,7 +16,7 @@ describe("My Login application", () => {
     );
     const btnClr = await browser.$("id=com.google.android.calculator:id/clr");
 
-    await browser.pause(10000);
+    await btn7.waitForDisplayed({ timeout: 10000 });
     await btn7.click();
     await btnDiv.click();
     await btn5.click();
