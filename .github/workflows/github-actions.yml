@@ -37,7 +37,7 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: app-apk
-          path: E:/Tools
+          path: E:/Tools/appium_node/calculator-7-8-271241277.apk
 
       - name: List files in download directory
         run: ls -l E:/Tools
