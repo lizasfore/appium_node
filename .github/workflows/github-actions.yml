@@ -49,6 +49,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      - name: Install dependencies
+        run: npm install
+
       - name: Run Tests on BrowserStack
         run: npm run test:android:bs
         env:
