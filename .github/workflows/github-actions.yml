@@ -9,12 +9,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      # Build APK step goes here (commented out in the example)
-      # - name: Upload APK as Artifact
-      #   uses: actions/upload-artifact@v2
-      #   with:
-      #     name: app-apk
-      #     path: path/to/your/app-release.apk
+      - name: Upload APK as Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: app-apk
+          path: calculator-7-8-271241277.apk
 
   deploy:
     needs: build
