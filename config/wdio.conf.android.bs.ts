@@ -7,7 +7,7 @@ export const config = {
     key: process.env.BROWSERSTACK_ACCESS_KEY,
     hostname: 'hub.browserstack.com',
 
-    capabilities: [{
+  capabilities: [{
         'bstack:options': {
           deviceName: 'Samsung Galaxy S21 Plus',
           osVersion: '11.0',

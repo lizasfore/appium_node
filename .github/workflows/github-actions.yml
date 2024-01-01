@@ -15,6 +15,12 @@ jobs:
           name: app-apk
           path: calculator-7-8-271241277.apk
 
+      - name: Set up JDK 11
+        uses: actions/setup-java@v2
+        with:
+          java-version: "11"
+          distribution: "adopt"
+
   deploy:
     needs: build
     runs-on: ubuntu-latest
