@@ -33,15 +33,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Download APK Artifact
-        uses: actions/download-artifact@v2
-        with:
-          name: app-apk
-          path: E:/Tools/appium_node/calculator-7-8-271241277.apk
-
-      - name: List files in download directory
-        run: ls -l E:/Tools
-
       - name: Upload APK to BrowserStack
         run: |
           curl -u "${{ secrets.BROWSERSTACK_USERNAME }}:${{ secrets.BROWSERSTACK_ACCESS_KEY }}" \
