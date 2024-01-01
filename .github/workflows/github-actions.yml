@@ -57,4 +57,4 @@ jobs:
         env:
           BROWSERSTACK_USERNAME: ${{ secrets.BROWSERSTACK_USERNAME }}
           BROWSERSTACK_ACCESS_KEY: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
-          BROWSERSTACK_APP_URL: ${{ needs.deploy.outputs.app_url }}
+          BROWSERSTACK_APP_URL: ${{ secrets.BROWSERSTACK_APP_URL }}
