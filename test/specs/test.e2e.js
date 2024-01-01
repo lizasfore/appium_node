@@ -41,12 +41,36 @@ describe("My Login application", () => {
     );
     const btnClr = await browser.$("id=com.google.android.calculator:id/clr");
 
+    await btn8.waitForDisplayed({ timeout: 10000 });
     await btn8.click();
+    await btnMult.waitForEnabled({ timeout: 10000 });
     await btnMult.click();
+    await btn4.waitForDisplayed({ timeout: 10000 });
     await btn4.click();
+    await btnEq.waitForEnabled({ timeout: 10000 });
     await btnEq.click();
+    await result.waitForDisplayed({ timeout: 10000 });
     expect(await result.getText()).toEqual("32");
+    await btnClr.waitForEnabled({ timeout: 10000 });
     await btnClr.click();
+
+    // const btn8 = await browser.$("id=com.google.android.calculator:id/digit_8");
+    // const btn4 = await browser.$("id=com.google.android.calculator:id/digit_4");
+    // const btnMult = await browser.$(
+    //   "id=com.google.android.calculator:id/op_mul"
+    // );
+    // const btnEq = await browser.$("id=com.google.android.calculator:id/eq");
+    // const result = await browser.$(
+    //   "id=com.google.android.calculator:id/result_final"
+    // );
+    // const btnClr = await browser.$("id=com.google.android.calculator:id/clr");
+
+    // await btn8.click();
+    // await btnMult.click();
+    // await btn4.click();
+    // await btnEq.click();
+    // expect(await result.getText()).toEqual("32");
+    // await btnClr.click();
   });
 
   it("should extract root from numbers", async () => {
