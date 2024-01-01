@@ -16,7 +16,7 @@ export const config = {
       // capabilities for local Appium web tests on an Android Emulator or Real device
       platformName: 'Android',
       'appium:deviceName': 'R58N21JR9ZA',
-      "appium:app": "E:/Downloadies/calculator-7-8-271241277.apk",
+      "appium:app": "calculator-7-8-271241277.apk",
       'appium:platformVersion': '13.0',
       'appium:automationName': 'UiAutomator2'
   }],
