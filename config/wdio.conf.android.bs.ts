@@ -11,15 +11,14 @@ export const config = {
     'bstack:options': {
       deviceName: 'Samsung Galaxy S20 Plus',
       platformVersion: '10.0',
-      platformName: 'android',
-      app: 'bs://f85b297283b2f26f1df918ed5637982fb6a72aee'
+      platformName: 'android'
         }
       }],
     services: [
         [
           'browserstack',
           {
-            app: process.env.BROWSERSTACK_ANDROID_APP_ID,
+            app: 'bs://f85b297283b2f26f1df918ed5637982fb6a72aee',
             buildIdentifier: "${BUILD_NUMBER}",
             // opts: { forcelocal: false, localIdentifier: "webdriverio-appium-app-browserstack-repo" },
             browserstackLocal: true,
