@@ -18,7 +18,7 @@ export const config = {
         [
           'browserstack',
           {
-            app: 'bs://f85b297283b2f26f1df918ed5637982fb6a72aee',
+            app: process.env.BROWSERSTACK_ANDROID_APP_ID,
             buildIdentifier: "${BUILD_NUMBER}",
             // opts: { forcelocal: false, localIdentifier: "webdriverio-appium-app-browserstack-repo" },
             browserstackLocal: true,
