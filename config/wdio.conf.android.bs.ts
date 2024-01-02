@@ -12,6 +12,7 @@ export const config = {
       deviceName: 'Samsung Galaxy S20 Plus',
       platformVersion: '10.0',
       platformName: 'android',
+      app: process.env.BROWSERSTACK_ANDROID_APP_ID
         }
       }],
     services: [
