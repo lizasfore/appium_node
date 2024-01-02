@@ -8,10 +8,10 @@ export const config = {
     hostname: 'hub.browserstack.com',
 
   capabilities: [{
-        'bstack:options': {
-          deviceName: 'Samsung Galaxy S21 Plus',
-          osVersion: '11.0',
-          deviceOrientation: 'portrait',
+    'bstack:options': {
+      deviceName: 'Samsung Galaxy S20 Plus',
+      platformVersion: '10.0',
+      platformName: 'android',
         }
       }],
     services: [
