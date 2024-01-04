@@ -5,7 +5,7 @@ import Page from "../pageobjects/page.js";
 
 const myPage = new Page();
 
-describe("My Login application", () => {
+describe("My calculator application", () => {
   it("should divide numbers properly", async () => {
     const btn7 = "id=com.google.android.calculator:id/digit_7";
     const btnDiv = "id=com.google.android.calculator:id/op_div";
