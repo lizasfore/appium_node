@@ -59,3 +59,6 @@ All test cases should be coded inside the test folder. There you can organize te
 
 We work with the Page Object Pattern described in <https://webdriver.io/docs/pageobjects.html>. The main idea is to encapsulate logic into page classes and use the logic in the spec files to run the tests.
 For instance we defined the LoginPage and the element as attributes in a class and reuse them in the code.
+
+### Browserstack results
+https://app-automate.browserstack.com/builds/cee58a08470cc315fe89244f75d0c1734013aae6/sessions/6070cca82f733347920cd40371e2f05ce31b5f40?auth_token=1d0e0c0873cc26d92030bb595ab5915ffe2a24f644b91aa1d3de1864dad37776
